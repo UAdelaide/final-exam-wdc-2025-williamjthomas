@@ -51,6 +51,8 @@ router.post('/login', async (req, res) => {
 
     const user = rows[0];
 
+    req.session.user
+
     let redirectUrl;
     if (user.role === 'owner') {
       redirectUrl = '/owner-dashboard.html';
