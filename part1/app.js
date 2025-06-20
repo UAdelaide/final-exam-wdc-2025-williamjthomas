@@ -26,6 +26,8 @@ let db;
                 ('caroline123', 'caroline@example.com', 'hashed131415', 'owner');
             `);
         }
+    } catch (err) {
+
     }
 })
 
