@@ -4,6 +4,10 @@ body {
   align-items: center;
 }
 
+h1 {
+  text-align: center;
+}
+
 a {
   color: #00B7FF;
 }
