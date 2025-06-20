@@ -60,7 +60,9 @@ let db;
 
 
 app.get('/api/dogs', async (req, res) => {
+    try {
 
+    }
 });
 
 app.get('/api/walkrequests/open', async (req, res) => {
