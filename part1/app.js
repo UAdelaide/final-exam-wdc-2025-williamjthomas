@@ -62,7 +62,8 @@ let db;
             `);
         }
 
-        const [WalkRatingsRows] = await db.execute('SELECT COUNT(*) AS count FROM Walk')
+        const [WalkRatingsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
+        if (WalkRatingsRows[0])
     } catch (err) {
         console.error('An error occurred:', err);
     }
