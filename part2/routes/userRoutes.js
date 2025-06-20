@@ -53,8 +53,9 @@ router.post('/login', async (req, res) => {
 
     req.session.user = {
       id: user.user_id,
-      username: user.use
-    }
+      username: user.username,
+      role: user.role
+    };
 
     let redirectUrl;
     if (user.role === 'owner') {
