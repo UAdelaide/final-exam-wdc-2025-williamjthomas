@@ -68,7 +68,7 @@ let db;
             await db.execute(`
                 INSERT INTO WalkApplications (request_id, walker_id, status)
                 VALUES
-                ((SELECT request_id FROM WalkRequests WHERE status = ))
+                ((SELECT request_id FROM WalkRequests WHERE status = 'completed'), )
             `)
         }
 
