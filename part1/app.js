@@ -66,7 +66,9 @@ let db;
         const [WalkApplicationsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
         if (WalkApplicationsRows[0].count === 0) {
             await db.execute(`
-                INSERT INTO WalkApplications (request_id, walker_id, )
+                INSERT INTO WalkApplications (request_id, walker_id, status)
+                VALUES
+                
             `)
         }
 
