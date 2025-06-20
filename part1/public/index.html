@@ -24,6 +24,7 @@
                     dogImage: null,
                 };
             },
+            methods: {
                 async fetchDogOfTheDay() {
                     try {
                         const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -37,6 +38,8 @@
                         console.error('Failed to fetch dog image');
                     }
                 }
+            }
+
         }).mount('#app');
     </script>
 </body>
