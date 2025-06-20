@@ -78,7 +78,7 @@ let db;
             await db.execute(`
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
                 VALUES
-                (SELECT request_id FROM WalkRequests WHERE duration_minutes = 10), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 
+                (SELECT request_id FROM WalkRequests WHERE duration_minutes = 10), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 5, 'Really good walk
                 `);
         }
     } catch (err) {
@@ -110,4 +110,4 @@ app.get('/api/walkers/summary', async (req, res) => {
 });
 */
 
-module.exports = app;
+module
