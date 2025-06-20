@@ -13,12 +13,7 @@ let db;
         database: 'DogWalkService'
     });
 
-
-}
-})
-
-
-const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
+    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO books (title, author) VALUES
@@ -27,6 +22,11 @@ const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
         ('Brave New World', 'Aldous Huxley')
       `);
     }
+}
+})
+
+
+
 
 app.get('/api/dogs', (req, res) => {
 
