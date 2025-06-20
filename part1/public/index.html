@@ -7,9 +7,9 @@
 
 <body>
 
-    <h1>Dog of the Day</h1>
-    <button onclick="fetchDogOfTheDay"></button>
     <div id="app">
+        <h1>Dog of the Day</h1>
+        <button onclick="fetchDogOfTheDay">Show dog</button>
         <img v-if="dogImage" :src="dogImage">
     </div>
 
