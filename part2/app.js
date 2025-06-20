@@ -6,7 +6,10 @@ const session = require('express-session');
 const app = express();
 
 app.use(session({
-    secret:
+    secret: 'secretkeyfromdotenvsoon',
+    resave: false,
+    saveUninitialized: false,
+    
 }))
 
 // Middleware
