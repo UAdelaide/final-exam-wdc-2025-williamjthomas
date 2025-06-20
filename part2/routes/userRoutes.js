@@ -60,8 +60,9 @@ router.post('/login', async (req, res) => {
 
     res.json({
       message: 'Login successful',
-      
+      redirect: redirectUrl
      });
+
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
