@@ -77,7 +77,7 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
-        const [walkRequests]
+        const [walkRequests] = await db.execute("")
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch walk requests' });
     }
