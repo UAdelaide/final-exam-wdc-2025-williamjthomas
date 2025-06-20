@@ -9,7 +9,9 @@ app.use(session({
     secret: 'secretkeyfromdotenvsoon',
     resave: false,
     saveUninitialized: false,
-    
+    cookie: {
+        secure: false,
+    }
 }))
 
 // Middleware
