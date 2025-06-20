@@ -61,6 +61,8 @@ let db;
                 ((SELECT dog_id FROM Dogs WHERE name = 'Mel'), '2025-06-09 08:15:00', 10, 'Parklands', 'completed');
             `);
         }
+
+        const []
     } catch (err) {
         console.error('An error occurred:', err);
     }
