@@ -43,12 +43,12 @@ let db;
         if (WalkRequestsRows[0].count === 0) {
             await db.execute(`
                 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-    VALUES
-    ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-    ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-    ((SELECT dog_id FROM Dogs WHERE name = 'Toby'), '2025-06-11 10:15:00', 20, 'Adelaide CBD', 'cancelled'),
-    ((SELECT dog_id FROM Dogs WHERE name = 'Sam'), '2025-06-11 10:25:00', 30, 'Adelaide CBD', 'open'),
-    ((SELECT dog_id FROM Dogs WHERE name = 'Mel'), '2025-06-09 08:15:00', 10, 'Parklands', 'completed');
+                VALUES
+                ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Toby'), '2025-06-11 10:15:00', 20, 'Adelaide CBD', 'cancelled'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Sam'), '2025-06-11 10:25:00', 30, 'Adelaide CBD', 'open'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Mel'), '2025-06-09 08:15:00', 10, 'Parklands', 'completed');
             `);
         }
     } catch (err) {
