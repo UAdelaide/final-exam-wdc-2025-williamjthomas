@@ -24,7 +24,7 @@ let db;
                 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
                 ('jameswalker', 'james@example.com', 'hashed101112', 'walker'),
                 ('caroline123', 'caroline@example.com', 'hashed131415', 'owner');
-      `);
+            `);
         }
     }
 })
