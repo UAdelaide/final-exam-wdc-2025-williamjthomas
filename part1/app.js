@@ -38,6 +38,19 @@ let db;
                 ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Mel', 'small');
             `);
         }
+
+        const [WalkRequestsRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+        if (DogsRows[0].count === 0) {
+            await db.execute(`
+                INSERT INTO Dogs (owner_id, name, size)
+                VALUES
+                ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+                ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+                ((SELECT user_id FROM Users WHERE username = 'caroline123'), 'Toby', 'large'),
+                ((SELECT user_id FROM Users WHERE username = 'caroline123'), 'Sam', 'medium'),
+                ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Mel', 'small');
+            `);
+        }
     } catch (err) {
         console.error('Error connecting to the database', err);
     }
