@@ -75,11 +75,13 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-/*
 app.get('/api/walkrequests/open', async (req, res) => {
-
+    try {
+        
+    }
 });
 
+/*
 app.get('/api/walkers/summary', async (req, res) => {
 
 });
