@@ -5,16 +5,17 @@ const mysql = require('mysql2');
 let db;
 
 (async () => {
-    
-})
-try {
+    try {
     const connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: '',
         database: 'DogWalkService'
     });
+
 }
+})
+
 
 const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
