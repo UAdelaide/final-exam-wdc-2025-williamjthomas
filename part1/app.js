@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql2');
 
-
+try {
+    
+}
 
 const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
