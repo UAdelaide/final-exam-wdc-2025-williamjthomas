@@ -8,7 +8,7 @@ try {
         user: 'root',
         password: '',
         database: 'DogWalkService'
-    })
+    });
 }
 
 const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
