@@ -14,13 +14,16 @@
         const { createApp } = Vue;
 
         createApp({
+            data() {
+                return 
+            }
             methods: {
                 async fetchDogOfTheDay() {
                     try {
                         const response = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await response.json();
                         if (data.status === 'success') {
-                            
+
                         }
                     }
                 }
