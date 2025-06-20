@@ -12,7 +12,7 @@ let db;
         password: '',
         database: 'DogWalkService'
     });
-
+    db = await 
 }
 })
 
