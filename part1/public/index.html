@@ -16,7 +16,9 @@
         createApp({
             data() {
                 return {
-                    dogImage: null };
+                    dogImage: null,
+                    error: null,
+                };
             },
             methods: {
                 async fetchDogOfTheDay() {
@@ -26,7 +28,7 @@
                         if (data.status === 'success') {
                             dogImage = data.message;
                         } else {
-
+                            error
                         }
                     }
                 }
