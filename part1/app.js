@@ -62,6 +62,8 @@ let db;
 app.get('/api/dogs', async (req, res) => {
     try {
 
+    } catch (err) {
+        res.status(500)
     }
 });
 
