@@ -107,9 +107,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
     try {
-
+        const []
     } catch (err) {
-        res.status(500).json()
+        res.status(500).json({ error: 'Failed to fetch summary of walkers' });
     }
 });
 
