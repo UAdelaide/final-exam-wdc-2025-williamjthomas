@@ -39,8 +39,8 @@ let db;
             `);
         }
 
-        const [WalkRequestsRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
-        if (DogsRows[0].count === 0) {
+        const [WalkRequestsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
+        if (WalkRequestsRows[0].count === 0) {
             await db.execute(`
                 INSERT INTO Dogs (owner_id, name, size)
                 VALUES
