@@ -27,7 +27,7 @@ let db;
             `);
         }
 
-        [rows] = await db.execute
+        [rows] = await db.execute('SELECT COUNT(*) AS count FROM ')
         if (rows[0].count === 0) {
             await db.execute(`
                 INSERT INTO Users
