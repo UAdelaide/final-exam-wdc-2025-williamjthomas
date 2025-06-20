@@ -69,8 +69,8 @@ let db;
                 INSERT INTO WalkApplications (request_id, walker_id, status)
                 VALUES
                 ((SELECT request_id FROM WalkRequests WHERE duration_minutes = 10), (SELECT user_id FROM Users WHERE username = 'bobwalker'), 'accepted'),
-                ((SELECT request_id FROM WalkRequests WHERE duration_minutes = 40))
-            `)
+                ((SELECT request_id FROM WalkRequests WHERE duration_minutes = 40), (SELECT user_id FROM Users WHERE username = 'bobwalker'), 'accepted');
+            `);
         }
 
         const [WalkRatingsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
@@ -79,7 +79,7 @@ let db;
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
                 VALUES
                 ()
-                `)
+                `);
         }
     } catch (err) {
         console.error('An error occurred:', err);
