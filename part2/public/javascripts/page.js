@@ -188,6 +188,7 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(xmlhttp.responseText);
+            window.location.href = response.redirect;
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
