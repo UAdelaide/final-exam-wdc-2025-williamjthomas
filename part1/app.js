@@ -10,5 +10,5 @@ app.get('/api/walkrequests/open', (req, res) => {
 });
 
 app.get('/api/walkers/summary', (req, res) => {
-    
-})
+
+});
