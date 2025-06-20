@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql2');
 
+let db;
+
+(async () => {
+    
+})
 try {
     const connection = mysql.createConnection({
         host: 'localhost',
