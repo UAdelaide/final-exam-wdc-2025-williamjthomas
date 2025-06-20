@@ -59,14 +59,14 @@ let db;
 
 
 
-app.get('/api/dogs', (req, res) => {
+app.get('/api/dogs', async (req, res) => {
 
 });
 
-app.get('/api/walkrequests/open', (req, res) => {
+app.get('/api/walkrequests/open', async (req, res) => {
 
 });
 
-app.get('/api/walkers/summary', (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
 
 });
