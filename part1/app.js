@@ -63,7 +63,9 @@ let db;
         }
 
         const [WalkRatingsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
-        if (WalkRatingsRows[0])
+        if (WalkRatingsRows[0].count === 0) {
+            await db.execute()
+        }
     } catch (err) {
         console.error('An error occurred:', err);
     }
