@@ -6,13 +6,14 @@ let db;
 
 (async () => {
     try {
-    const connection = await mysql.createConnection({
+    db = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: '',
         database: 'DogWalkService'
     });
-    
+
+
 }
 })
 
