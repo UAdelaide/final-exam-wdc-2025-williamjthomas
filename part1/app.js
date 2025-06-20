@@ -3,7 +3,9 @@ const app = express();
 const mysql = require('mysql2');
 
 try {
-    
+    const connection = mysql.createConnection({
+        
+    })
 }
 
 const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
