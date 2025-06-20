@@ -58,8 +58,8 @@ let db;
                 ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
                 ((SELECT dog_id FROM Dogs WHERE name = 'Toby'), '2025-06-11 10:15:00', 20, 'Adelaide CBD', 'cancelled'),
                 ((SELECT dog_id FROM Dogs WHERE name = 'Sam'), '2025-06-11 10:25:00', 30, 'Adelaide CBD', 'open'),
-                ((SELECT dog_id FROM Dogs WHERE name = 'Mel'), '2025-06-09 08:15:00', 10, 'Parklands', 'completed');
-                ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-13 09:15:00', 40, )
+                ((SELECT dog_id FROM Dogs WHERE name = 'Mel'), '2025-06-09 08:15:00', 10, 'Parklands', 'completed'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-13 09:15:00', 40, 'Adelaide Showgrounds', 'completed');
             `);
         }
 
