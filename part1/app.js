@@ -105,10 +105,12 @@ app.get('/api/walkrequests/open', async (req, res) => {
     }
 });
 
-/*
 app.get('/api/walkers/summary', async (req, res) => {
+    try {
 
+    } catch (err) {
+        res.status(500).json()
+    }
 });
-*/
 
 module.exports = app;
