@@ -62,7 +62,7 @@ let db;
             `);
         }
 
-        const []
+        const [WalkRatingsRows]
     } catch (err) {
         console.error('An error occurred:', err);
     }
