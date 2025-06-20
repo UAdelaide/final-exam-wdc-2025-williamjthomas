@@ -63,7 +63,8 @@ let db;
             `);
         }
 
-        const [WalkApplicationsRows] = await db.execute()
+        const [WalkApplicationsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
+        if (WalkApplicationsRows)
 
         const [WalkRatingsRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
         if (WalkRatingsRows[0].count === 0) {
