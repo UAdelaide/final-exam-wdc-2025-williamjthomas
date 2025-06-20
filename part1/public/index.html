@@ -9,13 +9,13 @@
 
     <h1>Dog of the Day</h1>
     <div id="app" display="none">
-        <button onclick=""></button>
+        <button onclick="showImage"></button>
         <img v-if="dogImage" :src="dogImage">
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        function toggleImage() {
+        function showImage() {
             let image = document.getElementById('app');
             image.style.display = "block"
         }
