@@ -69,7 +69,7 @@ let db;
                 INSERT INTO WalkApplications (request_id, walker_id, status)
                 VALUES
                 ((SELECT request_id FROM WalkRequests WHERE duration_minutes = 10), (SELECT user_id FROM Users WHERE username = 'bobwalker'), 'accepted'),
-                ((SELECT ))
+                ((SELECT request_id FROM WalkRequests WHERE duration_minutes = 40))
             `)
         }
 
