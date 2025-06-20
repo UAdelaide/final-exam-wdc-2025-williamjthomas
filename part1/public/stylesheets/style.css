@@ -4,10 +4,6 @@ body {
   align-items: center;
 }
 
-h1 {
-  text-align: right;
-}
-
 a {
   color: #00B7FF;
 }
@@ -16,3 +12,4 @@ a {
   display: flex;
   flex-direction: column;
 }
+
