@@ -67,25 +67,25 @@
         tbody.innerHTML = '';
 
         dogs.forEach(dog => {
-              const row = document.createElement('tr');
+          const row = document.createElement('tr');
 
-              const dogPhoto = await fetchDogOfTheDay();
+          const dogPhoto = await fetchDogOfTheDay();
 
-              row.innerHTML = `
-            <td>${dog.dog_id}</td>
-            <td>${dog.name}</td>
-            <td>${dog.size}</td>
-            <td>${dog.owner_id}</td>
-            <td>${fetchDogOfTheDay()}</td>
-            `;
+          row.innerHTML = `
+        <td>${dog.dog_id}</td>
+        <td>${dog.name}</td>
+        <td>${dog.size}</td>
+        <td>${dog.owner_id}</td>
+        <td>${fetchDogOfTheDay()}</td>
+        `;
 
-            tbody.appendChild(row);
-            });
-          })
-          .catch(err => console.error(err));
-      } catch (err) {
-        console.error(err);
-      }
+          tbody.appendChild(row);
+        });
+      })
+          .catch (err => console.error(err));
+    } catch (err) {
+      console.error(err);
+    }
     }
 
     loadDogs();
