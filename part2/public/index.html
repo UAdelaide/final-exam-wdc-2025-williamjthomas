@@ -25,7 +25,7 @@
 
         <button type="button" onclick="login()" class="btn btn-primary my-2">Log In</button>
       </form>
-      <table>
+      <table id="dogs">
         <thead>
           <tr>
             <th>Dog ID</th>
@@ -56,7 +56,7 @@
         fetch('http://localhost:8080/api/dogs')
         .then(res => res.json())
         .then(data => {
-          
+
         })
         .catch(err => console.error(err));
       }
