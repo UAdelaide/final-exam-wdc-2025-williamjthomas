@@ -12,33 +12,33 @@
 <body class="bg-light">
 
   <div id="app" class="container py-5">
-      <h1 class="mb-4 text-primary">{{ message }}</h1>
-      <p class="lead">Connect with trusted walkers for your beloved dog!</p>
-      <form>
-        <div>
-          <label for="username" class="py-2">Username</label>
+    <h1 class="mb-4 text-primary">{{ message }}</h1>
+    <p class="lead">Connect with trusted walkers for your beloved dog!</p>
+    <form>
+      <div>
+        <label for="username" class="py-2">Username</label>
         <input type="text" class="form-control mb-2" id="username" name="username" required>
-        </div>
+      </div>
 
-        <label for="password" class="py-2">Password</label>
-        <input type="password" class="form-control mb-2" id="password" name="password" required>
+      <label for="password" class="py-2">Password</label>
+      <input type="password" class="form-control mb-2" id="password" name="password" required>
 
-        <button type="button" onclick="login()" class="btn btn-primary my-2">Log In</button>
-      </form>
-      <table id="dogs-table">
-        <thead>
-          <tr>
-            <th>Dog ID</th>
-            <th>Name</th>
-            <th>Size</th>
-            <th>Owner ID</th>
-            <th>Photo</th>
-          </tr>
-        </thead>
-        <tbody>
+      <button type="button" onclick="login()" class="btn btn-primary my-2">Log In</button>
+    </form>
+    <table id="dogs-table">
+      <thead>
+        <tr>
+          <th>Dog ID</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Owner ID</th>
+          <th>Photo</th>
+        </tr>
+      </thead>
+      <tbody>
 
-        </tbody>
-      </table>
+      </tbody>
+    </table>
   </div>
 
   <script>
@@ -54,25 +54,40 @@
     async function loadDogs() {
       try {
         fetch('http://localhost:8080/api/dogs')
-        .then(res => res.json())
-        .then(data => {
-          const tbody = document.querySelector('#dogs-table tbody');
-          tbody.innerHTML = '';
+          .then(res => res.json())
+          .then(data => {
+            const tbody = document.querySelector('#dogs-table tbody');
+            tbody.innerHTML = '';
 
-          dogs.forEach(dog => {
-            const row = document.createElement('tr');
+            dogs.forEach(dog => {
+              const row = document.createElement('tr');
 
-            row.innerHTML = `
+              row.innerHTML = `
             <td>${dog.dog_id}</td>
             <td>${dog.name}</td>
             <td>${dog.size}</td>
             <td>${dog.owner_id}</td>
             `
-          });
-        })
-        .catch(err => console.error(err));
+            });
+          })
+          .catch(err => console.error(err));
       }
     }
+
+    async function fetchDogOfTheDay() {
+      try {
+        const response = await fetch('https://dog.ceo/api/breeds/image/random');
+        const data = await response.json();
+        if (data.status === 'success') {
+          this.dogImage = data.message;
+        } else {
+          console.error('Failed to fetch dog image');
+        }
+      } catch (err) {
+        console.error('Failed to fetch dog image');
+      }
+    }
+
   </script>
   <script src="/javascripts/page.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
