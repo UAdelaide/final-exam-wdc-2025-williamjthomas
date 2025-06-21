@@ -55,6 +55,8 @@
       setup() {
         const dogs = ref([]);
 
+        
+
         onMounted(async () => {
           try {
             const res = await fetch('/api/users/dogs-table');
