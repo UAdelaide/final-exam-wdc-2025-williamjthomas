@@ -90,7 +90,7 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
-  const userID = req.session.user.user_id;
+  const userID = req.session.user.id;
   if (!userID) {
     return res.status(401).json({ error: 'Not logged in' });
   }
