@@ -57,7 +57,8 @@
 
         onMounted(async () => {
           try {
-            const res = await fetch('/api/users/')
+            const res = await fetch('/api/users/dogs-table');
+            const data = await res.json();
           }
         })
       }
