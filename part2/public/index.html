@@ -58,12 +58,15 @@
         async function fetchDogOfTheDay() {
           const res = await fetch('https://dog.ceo/api/breeds/image/random');
           const data = await res.json();
+          return data.message;
         }
 
         onMounted(async () => {
           try {
             const res = await fetch('/api/users/dogs-table');
             const data = await res.json();
+
+            for (const dog of data)
           } catch (err) {
             console.error('Error loading dogs:', err);
           }
