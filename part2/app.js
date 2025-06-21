@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const session = require('express-session');
-const cors = require('cors');
 
 const app = express();
 
@@ -15,8 +14,6 @@ app.use(session({
         maxAge: 1000 * 60 * 60
     }
 }));
-
-app.use(cors());
 
 // Middleware
 app.use(express.json());
