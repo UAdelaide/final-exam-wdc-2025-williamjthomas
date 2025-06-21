@@ -127,6 +127,10 @@
           loadWalks();
         });
 
+        onMounted(async () => {
+          const res = await fetch('/api/')
+        })
+
         return {
           form,
           walks,
