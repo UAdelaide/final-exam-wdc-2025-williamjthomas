@@ -89,7 +89,7 @@ router.post('/logout', (req, res) => {
   });
 });
 
-route.get('/dogs', async (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [dogs] = await db.query("SELECT d.name FROM Dogs d JOIN Users u ON d.owner_id = u.user_id");
     res.json(dogs);
