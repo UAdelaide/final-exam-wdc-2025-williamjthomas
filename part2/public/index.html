@@ -43,19 +43,7 @@
 
   <script>
 
-    async function fetchDogOfTheDay() {
-      try {
-        const response = await fetch('https://dog.ceo/api/breeds/image/random');
-        const data = await response.json();
-        if (data.status === 'success') {
-          return data.message;
-        } else {
-          console.error('Failed to fetch dog image');
-        }
-      } catch (err) {
-        console.error('Failed to fetch dog image');
-      }
-    }
+
 
     async function loadDogs() {
       try {
