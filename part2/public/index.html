@@ -66,7 +66,9 @@
             const res = await fetch('/api/users/dogs-table');
             const data = await res.json();
 
-            for (const dog of data)
+            for (const dog of data) {
+              dog.image = await fetchDogOfTheDay();
+            }
           } catch (err) {
             console.error('Error loading dogs:', err);
           }
