@@ -69,14 +69,11 @@
         dogs.forEach(dog => {
           const row = document.createElement('tr');
 
-          const dogPhoto = await fetchDogOfTheDay();
-
           row.innerHTML = `
         <td>${dog.dog_id}</td>
         <td>${dog.name}</td>
         <td>${dog.size}</td>
         <td>${dog.owner_id}</td>
-        <td>${dogPhoto}</td>
         `;
 
           tbody.appendChild(row);
