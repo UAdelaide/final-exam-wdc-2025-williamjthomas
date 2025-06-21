@@ -62,7 +62,9 @@
           dogs.forEach(dog => {
             const row = document.createElement('tr');
 
-            row.innerHTML = 
+            row.innerHTML = `
+            <td>${dog.dog_id}
+            `
           });
         })
         .catch(err => console.error(err));
