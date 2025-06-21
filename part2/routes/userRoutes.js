@@ -95,8 +95,8 @@ route.get('/dogs', async (req, res) => {
     res.json(dogs);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to fetch user})
+    res.status(500).json({ error: 'Failed to fetch users dogs' });
   }
-})
+});
 
 module.exports = router;
