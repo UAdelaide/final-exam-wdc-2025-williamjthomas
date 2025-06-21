@@ -55,6 +55,10 @@
       try {
         fetch('http://localhost:8080/api/dogs')
         .then(res => res.json())
+        .then(data => {
+
+        })
+        .catch(err => console.error(err));
       }
     }
   </script>
