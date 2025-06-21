@@ -6,7 +6,7 @@ const session = require('express-session');
 const app = express();
 
 app.use(session({
-    secret: 'secretkeyfromdotenvsoon',
+    secret: SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
