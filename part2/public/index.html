@@ -50,40 +50,9 @@
   </div>
 
   <script>
-
-
-
-    async function loadDogs() {
-      try {
-        const res = await fetch('/api/dogs');
-        if (!res.ok) throw new Error('Failed to fetch dogs');
-        const dogs = await res.json();
-
-        const tbody = document.querySelector('#dogs-table tbody');
-        tbody.innerHTML = '';
-
-        dogs.forEach(dog => {
-          const row = document.createElement('tr');
-
-          row.innerHTML = `
-        <td>${dog.dog_id}</td>
-        <td>${dog.name}</td>
-        <td>${dog.size}</td>
-        <td>${dog.owner_id}</td>
-        `;
-
-          tbody.appendChild(row);
-        });
-      } catch (err) {
-        console.error(err);
-      }
-    }
-
-    loadDogs();
-  </script>
-  <script>
     const { createApp } = Vue;
     createApp({
+      setup()
       data() {
         return {
           message: 'Welcome to the Dog Walking Service!'
