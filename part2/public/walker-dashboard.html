@@ -76,6 +76,7 @@
           const walkerID = await getCurrentUser();
           if (!walkerID) {
             console.error('Must be logged in');
+            return;
           }
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
