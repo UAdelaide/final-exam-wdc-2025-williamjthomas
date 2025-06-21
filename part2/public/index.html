@@ -63,17 +63,10 @@
         if (!res.ok) throw new Error('Failed to fetch dogs');
         const dogs = await res.json();
 
-        
+        const tbody = document.querySelector('#dogs-table tbody');
+        tbody.innerHTML = '';
 
-
-
-        fetch('http://localhost:8080/api/dogs')
-          .then(res => res.json())
-          .then(data => {
-            const tbody = document.querySelector('#dogs-table tbody');
-            tbody.innerHTML = '';
-
-            dogs.forEach(dog => {
+        dogs.forEach(dog => {
               const row = document.createElement('tr');
 
               const dogPhoto = await fetchDogOfTheDay();
