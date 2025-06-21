@@ -129,8 +129,8 @@
 
         onMounted(async () => {
           const res = await fetch('/api/users/dogs');
-          
-        })
+          dogs.value = await res.json();
+        });
 
         return {
           form,
