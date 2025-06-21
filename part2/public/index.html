@@ -68,7 +68,9 @@
             <td>${dog.size}</td>
             <td>${dog.owner_id}</td>
             <td>${fetchDogOfTheDay()}</td>
-            `
+            `;
+
+            tbody.appendChild(row);
             });
           })
           .catch(err => console.error(err));
