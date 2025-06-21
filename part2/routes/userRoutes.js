@@ -94,7 +94,7 @@ route.get('/dogs', async (req, res) => {
     const [dogs] = await db.query("SELECT d.name FROM Dogs d JOIN Users u ON d.owner_id = u.user_id");
     res.json(dogs);
   } catch (err) {
-    console.
+    console.error(err)
   }
 })
 
