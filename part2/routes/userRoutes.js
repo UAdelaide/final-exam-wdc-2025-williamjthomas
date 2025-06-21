@@ -80,7 +80,7 @@ router.post('/logout', (req, res) => {
       console.error('Logout error:', err);
       return res.status(500).json({ error: 'Logout failed' });
     }
-    res.clearCookie('connect.sid', {});
+    res.clearCookie('connect.sid', { secure: false });
     let redirectUrl = '/';
     res.json({
       message: 'Logged out',
