@@ -57,7 +57,7 @@
         .then(res => res.json())
         .then(data => {
           const tbody = document.querySelector('#dogs-table tbody');
-          
+          tbody.innerHTML = '';
         })
         .catch(err => console.error(err));
       }
