@@ -60,10 +60,11 @@
             const res = await fetch('/api/users/dogs-table');
             const data = await res.json();
           } catch (err) {
-            
+            console.error('Error loading dogs:', err);
           }
-        })
-      }
+        });
+      },
+      
       data() {
         return {
           message: 'Welcome to the Dog Walking Service!'
