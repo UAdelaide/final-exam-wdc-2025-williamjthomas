@@ -48,7 +48,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const user = 3;
+        const OldUser = 3;
 
         async function loadWalkRequests() {
           try {
@@ -73,6 +73,7 @@
         }
 
         async function applyToWalk(requestId) {
+          const 
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
