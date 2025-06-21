@@ -55,7 +55,9 @@
       setup() {
         const dogs = ref([]);
 
-        
+        async function fetchDogOfTheDay() {
+          const res = await fetch('')
+        }
 
         onMounted(async () => {
           try {
