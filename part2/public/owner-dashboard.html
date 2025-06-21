@@ -131,7 +131,7 @@
           loadWalks();
         });
 
-        onMounted(async () => {
+         onMounted(async () => {
           const res = await fetch('/api/users/dogs');
           dogs.value = await res.json();
         });
@@ -141,7 +141,8 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          dogs, selectedDog
         };
       }
     }).mount('#app');
