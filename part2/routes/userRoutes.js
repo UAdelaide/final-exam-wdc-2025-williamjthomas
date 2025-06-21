@@ -77,7 +77,10 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req, res) => {
   req.session.destroy(() => {
     let redirectUrl = '/index.html';
-    res.json({ message: 'Logged out' });
+    res.json({
+      message: 'Logged out',
+      redirect: redirectUrl
+    });
   });
 });
 
