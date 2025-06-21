@@ -91,7 +91,10 @@ router.post('/logout', (req, res) => {
 
 router.get('/dogs', async (req, res) => {
   const userID = req.session.user.user_id;
-  if (!u)
+  if (!userID) {
+    return res.status(401).json({ error: 'Not logged in' });
+  }
+
   try {
     const [dogs] = await db.query("SELECT d.name FROM Dogs d JOIN Users u ON d.owner_id = u.user_id");
     res.json(dogs);
