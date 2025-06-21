@@ -54,6 +54,7 @@
     async function loadDogs() {
       try {
         fetch('http://localhost:8080/api/dogs')
+        .then(res => res.json())
       }
     }
   </script>
